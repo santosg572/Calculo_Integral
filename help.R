@@ -1,3 +1,3 @@
-print(help(seq))
+print(help(text))
 
 

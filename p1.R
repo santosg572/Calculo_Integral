@@ -1,5 +1,3 @@
-library("latex2exp")
-
 x1 = 0
 x2 = 5
 h = .01
@@ -36,6 +34,6 @@ points(c(xn[i+1],xn[i+1]), c(0,yn[i+1]), type='l', col='blue', lwd=3)
 i = np1-1
 points(c(xn[i+1],xn[i+1]), c(0,yn[i+1]), type='l', col='blue', lwd=3)
 
-text(1,1,TeX(r"(\textbf{Euler's identity} is $e^{i\pi} + 1 = 0$.)")
+text(2,15,expression(y==x^2), cex=3)
 
 
