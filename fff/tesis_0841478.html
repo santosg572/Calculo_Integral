@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+  font-size: 20px;
+  font-family: Arial;
+}
+</style>
+</head>
+<body>
+
+<h1>Aprendizaje de m´aquina en fen´omenos din´amicos y fractales</h1>
+
+<pre style="font-size:20px">
+1. Aprendizaje de m´aquina en fen´omenos din´amicos y fractales 1
+
+1.1. Motivaci´on . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+
+1.2. Introducci´on . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+
+1.3. Hip´otesis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+1.4. Objetivos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+2. Fen´omeno din´amico: Cin´etica de formaci´on de hidratos de metano 7
+
+2.1. Antecedentes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+2.2. Modelo de aprendizaje profundo para imputar datos. . . . . . . . . . . 12
+
+2.3. Ecuaci´on emp´ırica para la cin´etica de la formaci´on de hidratos de metano. . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 16
+
+2.4. Discusi´on y conclusiones preliminares . . . . . . . . . . . . . . . . . . . . 19
+
+3. Fen´omeno din´amico caso: Antenas fractales de Peano 25
+
+3.1. Antecedentes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+
+3.2. Simulaciones num´ericas. . . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+
+3.3. Resultados. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+
+3.4. Peano 1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+
+3.5. Ecuaciones para las frecuencias donde el VSWR ≤ 2. . . . . . . . . . . . 35
+
+3.6. Discusi´on y conclusiones preliminares . . . . . . . . . . . . . . . . . . . . 38
+
+4. Fen´omeno din´amico: Antena autoevitable 41
+
+4.1. Antecedentes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41
+
+4.2. Geometr´ıa de la SA-antena mediante el algoritmo de Backtracking. . . 42
+
+4.3. Algoritmo gen´etico aplicado en la obtenci´on de una antena sintonizada . 51
+
+4.4. Discusi´on y conclusiones preliminares . . . . . . . . . . . . . . . . . . . . 53
+
+5. Conclusiones 57
+
+v ´INDICE GENERAL
+
+6. Trabajo futuro 59
+
+7. Resumen 61
+
+A. Tablas de datos 63
+
+A.1. Ap´endice A . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63
+
+Bibliograf´ıa 69
+
+</pre> 
+
+<h3> Aprendizaje de m´aquina en fen´omenos din´amicos y fractales </h3>
+
+<h3> 0.1. Motivaci´on </h3>
+
+<p> Un fen´omeno din´amico es un evento o proceso que cambia con el tiempo y est´a en constante evoluci´on. En cualquier 
+ciencia 
+o campo, los fen´omenos din´amicos pueden ser estudiados y analizados para entender su comportamiento y c´omo afectan a 
+otros sistemas o elementos relacionados. Algunos ejemplos de fen´omenos din´amicos incluyen la econom´ıa, el clima, la 
+poblaci´on y los patrones de movimiento en la naturaleza. Algunos de estos fen´omenos din´amicos como los sistemas 
+clim´aticos, los comportamientos ﬁnancieros, reacciones qu´ımicas etc, pueden exhibir patrones fractales. Para estudiar 
+estos fen´omenos, se propone el desarrollo de m´etodos que utilicen aprendizaje de m´aquina que sirvan para procesar datos 
+obtenidos ya sea de forma experimental o por simulaci´on computacional para describir sus comportamientos, obtener 
+predicciones de los mismos fuera del rango experimental, o descubrir patrones. </p>
+
+0.2. Introducci´on
+
+El aprendizaje de m´aquina es una rama de la inteligencia artiﬁcial que se centra en el desarrollo de algoritmos y modelos 
+computacionales que permiten a las m´aquinas aprender a partir de datos y realizar tareas sin ser expl´ıcitamente 
+programadas para hacerlo. Es una rama de la inteligencia artiﬁcial basada en la idea de que los sistemas pueden aprender de 
+los datos, identiﬁcar patrones y tomar decisiones con una intervenci´on humana m´ınima. Tiene una serie de aplicaciones 
+importantes en diversos campos, entre ellas:
+
+1. Sanidad: los algoritmos de aprendizaje autom´atico pueden utilizarse para predecir la probabilidad de ciertas 
+enfermedades, identiﬁcar posibles efectos secundarios de los medicamentos y hacer recomendaciones de tratamiento.
+
+2. Finanzas: el aprendizaje autom´atico puede utilizarse para detectar transacciones
+
+fraudulentas con tarjetas de cr´edito, predecir el precio de las acciones e identiﬁcar posibles oportunidades de 
+inversi´on.
+
+3. Fabricaci´on: el aprendizaje autom´atico puede utilizarse para optimizar los procesos de producci´on, predecir fallos en 
+los equipos y mejorar la gesti´on de la cadena de suministro.
+
+4. Atenci´on al cliente: el aprendizaje autom´atico puede utilizarse para mejorar la eﬁciencia de las operaciones de 
+atenci´on al cliente prediciendo qu´e consultas de los clientes pueden requerir una asistencia m´as compleja y 
+dirigi´endolas al agente adecuado.
+
+En general, la importancia del aprendizaje autom´atico radica en su capacidad para analizar conjuntos de datos grandes y 
+complejos, identiﬁcar patrones y tendencias que podr´ıan no ser evidentes de inmediato para los humanos, y tomar decisiones 
+basadas en esos conocimientos. Esto puede ayudar a las organizaciones a tomar decisiones m´as informadas, mejorar las 
+operaciones e impulsar el crecimiento del negocio.
+
+Los datos actualmente son un activo importante y valioso de grupos cient´ıﬁcos, empresas y gobiernos. Con el auge del 
+aprendizaje de maquina estos datos son vitales para el desarrollo de nuevos m´etodos, algoritmos, aplicaciones y usos del 
+saber cient´ıﬁco en distintos ´ambitos de la sociedad.
+
+En medicina se incrementan los estudios del uso de nuevas mol´eculas en varios padecimientos y enfermedades usando 
+inteligencia artiﬁcial para acotar la enorme cantidad de mol´eculas candidatas. Un ejemplo de caso de ´exito es el uso de 
+nuevas mol´eculas para su aplicaci´on como agentes antibi´oticos.
+
+En el ´ambito del desarrollo de materiales para aplicaciones industriales se ha utilizado aprendizaje de m´aquina para 
+obtener nuevas aleaciones. Las combinaciones de nuevas aleaciones con decenas de elementos se calcula que puede alcanzar 
+aproximadamente 10 78 combinaciones. Un n´umero de aleaciones para investigar demasiado grande por lo que se necesita 
+acotarlo para ahorrar tiempo y esfuerzo. La mayor´ıa de las aleaciones conocidas se han desarrollado por el m´etodo 
+experimental de prueba y error ayud´andose con el conocimiento acumulado de las propiedades f´ısicas y qu´ımicas de los 
+materiales. En concreto se puede hablar de nuevas aleaciones comparadas con el invar1  , cuyos usos se extienden a dise˜no 
+de instrumentos de precisi´on, relojes, mec´anica de ´opticas de telescopio entre otros, Rao et al. [7] han generado dos 
+aleaciones por medio de IA que igualan al invar y otras dos tiene el coeﬁciente de expansi´on t´ermica m´as bajo.
+
+En este trabajo se abord´o el uso de aprendizaje de m´aquina junto con el c´omputo cient´ıﬁco para su exploraci´on en la 
+aplicaci´on de dos temas centrales. El primer tema es el uso de estas herramientas para imputar datos no explorados de un 
+experimento acerca de la velocidad de formaci´on de hidratos de metano, sobre estos datos imputados se obtiene mediante 
+programaci´on gen´etica una formula para predecir dicha velocidad. El segundo tema se centra sobre antenas fractales, se han 
+calculado por medio de computo cient´ıﬁco las propiedades electromagn´eticas de m´ultiples antenas con una geometr´ıa 
+basada en la curva fractal de Peano, analizando los datos obtenidos y utilizando nuevamente programaci´on gen´etica, se 
+muestran las relaciones en las propiedades el´ectricas mediante formulas matem´aticas, esto en el estudio de una estructura 
+de antenas ﬁja. Despu´es se aborda el estudio de otro tipo de antena con estructura variable para que cubra requerimientos 
+espec´ıﬁcos de dise˜no, aplicando algoritmos gen´eticos y m´etodos num´ericos electromagn´eticos.
+
+0.3. Hip´otesis
+
+El aprendizaje de m´aquina es una herramienta poderosa en la investigaci´on que permite estudiar conjuntos de datos 
+obtenidos de fen´omenos din´amicos para modelar relaciones entre los mismos y poder ser aplicados a predicciones de su 
+comportamiento. Es posible entrenar modelos para predecir el comportamiento futuro de un sistema din´amico bas´andose en su 
+historial as´ı como identiﬁcar patrones que ayuden a comprender el funcionamiento o la relaci´on de estos fen´omenos.
+
+0.4. Objetivos
+
+Se propondr´a un m´etodo que usa inteligencia artiﬁcial (IA) para la imputaci´on 1 de datos dispersos experimentales sobre 
+la velocidad de formaci´on de hidratos de metano (HM).
+
+Se desarrollar´a el software necesario para el uso de algoritmos gen´eticos en la obtenci´on de relaciones matem´aticas de 
+datos tanto de la velocidad de formaci´on de hidrato de metano, as´ı como de las propiedades electromagn´eticas de antenas 
+fractales.
+
+Se obtendr´an relaciones matem´aticas de datos obtenidos por medio de c´omputo cient´ıﬁco de antenas fractales 
+deterministas y estoc´asticas para la predicci´on de su comportamiento y mejorar su eﬁciencia energ´etica.
+
+En esta tesis doctoral, se desarrolla un estudio en tres campos distintos. En el primer cap´ıtulo, se despliega una 
+innovadora aplicaci´on de las redes neuronales para la
+
+imputaci´on de datos en fen´omenos din´amicos. Con la eﬁcacia y precisi´on inherentes a estas poderosas herramientas de 
+aprendizaje autom´atico, se logra generar una ecuaci´on que describe acertadamente el comportamiento del fen´omeno 
+estudiado. Esta aproximaci´on computacional a la resoluci´on de problemas de imputaci´on de datos ofrece un punto de partida 
+s´olido para investigaciones futuras en el campo.
+
+El segundo cap´ıtulo nos lleva al mundo de las antenas fractales, centr´andose en particular en la antena de Peano. La 
+geometr´ıa ´unica de esta antena es estudiada en profundidad, y se emplean t´ecnicas de c´omputo cient´ıﬁco para calcular 
+sus propiedades de manera precisa. El an´alisis no se detiene all´ı, ya que se emplean algoritmos gen´eticos para obtener 
+ecuaciones que describen las propiedades estudiadas. Este estudio integral de las antenas fractales de Peano proporciona un 
+marco valioso para futuras investigaciones y aplicaciones en este campo.
+
+Finalmente, en el tercer cap´ıtulo, se realiza un an´alisis riguroso de las antenas con estructuras pseudoaleatorias. 
+Utilizando un enfoque similar al del cap´ıtulo anterior, se estudian las caracter´ısticas de estas antenas y se obtienen 
+ecuaciones que describen sus propiedades. Este cap´ıtulo no solo proporciona una valiosa contribuci´on al campo del 
+an´alisis de antenas, sino que tambi´en establece un puente s´olido entre el an´alisis te´orico y las aplicaciones 
+pr´acticas.
+
+El cuarto cap´ıtulo marca un punto de reﬂexi´on crucial, ya que se recogen y sintetizan las conclusiones de los cap´ıtulos 
+anteriores. Se eval´uan y destacan los logros obtenidos en cada cap´ıtulo, proporcionando una visi´on integrada de las 
+contribuciones a la teor´ıa y la pr´actica que resultan de este estudio. Este cap´ıtulo no solo sirve para resumir los 
+resultados y discutir las implicaciones, sino que tambi´en proporciona una perspectiva sobre las limitaciones del estudio y 
+posibles direcciones para futuras investigaciones.
+
+El ´ultimo cap´ıtulo, como es t´ıpico en los trabajos de investigaci´on, se dedica a contemplar y describir posibles 
+direcciones para futuros trabajos de investigaci´on. A la luz de los hallazgos y conclusiones presentados en los cap´ıtulos 
+anteriores, se esbozan varias oportunidades prometedoras para futuras investigaciones. Aqu´ı, se profundiza en c´omo la 
+t´ecnica de imputaci´on desarrollada a lo largo de este trabajo podr´ıa aplicarse a nuevos conjuntos de datos 
+experimentales, as´ı como la posibilidad de extender las t´ecnicas de estudio de antenas a otros tipos de estructuras, como 
+antenas con estructuras de curvas fractales de Wunderlich, Hilbert y Moore.
+
+Adem´as, se sugiere la mejora de los resultados actuales acerc´andolos m´as a la realidad a trav´es de la incorporaci´on de 
+sustratos en los modelos de antena. Este cap´ıtulo pone de maniﬁesto la naturaleza c´ıclica de la investigaci´on 
+cient´ıﬁca, donde cada respuesta descubierta abre una serie de nuevas preguntas y posibilidades.
+
+
+
+</body>
+</html>
+
+
