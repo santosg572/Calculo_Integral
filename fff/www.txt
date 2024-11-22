@@ -1,0 +1,12 @@
+https://www.sdsc.edu/education_and_training/tutorials1/singularity_old.html
+https://centers.hpc.mil/users/docs/general/singularity.html
+https://singularity-tutorial.github.io/
+https://labs.icahn.mssm.edu/minervalab/documentation/running-container-singularity/
+https://hpc.wsu.edu/programmers-guide/singularity/
+https://docs.rc.fas.harvard.edu/kb/singularity-on-the-cluster/
+https://hpc.auburn.edu/hpc/docs/hpcdocs/build/html/easley/containers.html
+https://www.carc.usc.edu/user-guides/hpc-systems/software/singularity
+https://singularityware.github.io/index.html
+https://docs.alliancecan.ca/wiki/Singularity
+
+
